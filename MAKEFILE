@@ -1,0 +1,21 @@
+# Makefile para compilar e rodar testes da atividade de Grafos
+
+# Nome do arquivo principal
+MAIN = main.py
+
+# Nome do arquivo de entrada do grafo
+ARQUIVO = pcv4.txt
+
+# Vértices para busca com caminho (pode ajustar conforme necessidade)
+ORIGEM = 0
+DESTINO = 3
+
+# Comando para executar o código
+run:
+	@echo "Executando testes com BFS (caminho) e DFS iterativo..."
+	python3 $(MAIN) $(ARQUIVO) $(ORIGEM) $(DESTINO)
+
+help:
+	@echo "Comandos disponíveis:"
+	@echo "  make run        - Executa main.py com os parâmetros definidos no Makefile"
+	@echo "  make help       - Mostra esta ajuda"
